@@ -1,8 +1,7 @@
 package com.serper.CalculatorTests.services;
 
-import com.serper.CalculatorTests.exceptions.divideByZeroException;
+import com.serper.CalculatorTests.exceptions.DivideByZeroException;
 import org.junit.jupiter.api.Test;
-import org.springframework.stereotype.Service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -49,7 +48,7 @@ class CalculatorServiceImplTest {
 
     @Test
     void testDivideByZeroThrowException() {
-        assertThrows(divideByZeroException.class, () -> {
+        assertThrows(DivideByZeroException.class, () -> {
             out.divide((10), 0);
         });
     }
